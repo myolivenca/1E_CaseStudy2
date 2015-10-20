@@ -1,0 +1,100 @@
+
+.Navigation{
+	background-color: $color-nav;
+	& a{
+		text-decoration: underline;
+	}
+    &.left-nav{ // LEFT NAVIGATION
+		border-top: 2px solid $color-dynamic-nav;
+		width: $left-width;
+		position: absolute;
+		z-index: 10;
+		transition: margin-left ease 300ms;
+		& h4 { 
+			font-weight: 400;
+		}
+        & ul{
+            width: 100%;
+            & li{
+                & a{
+					display: block;
+                    position: relative;
+					@include font-size(-2);
+                    padding: 8px 15px;
+                    transition: ease 500ms background-color;
+                    color: darken($color-positive,15%);
+					text-decoration: none;
+                    &:hover{
+                        color: $color-positive;
+						background-color: $color-nav-hover;
+                        &:after{
+                            width: 2px;
+                        }
+                    }
+                    &:after{
+                        content: "";
+                        display: block;
+                        width: 0px;
+                        height: 100%;
+                        background-color: $color-dynamic-nav;
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        transition: ease 500ms background-color, linear 100ms width;
+                    }
+					& [class^='icon-']{
+						float:left;
+						margin-top: 2px;
+					}
+					& span{
+						@include font-size(-4);
+						display: block;
+						margin-left: 20px;
+					}
+                }
+				
+            }
+			&.no-link li{
+				display: block;
+                position: relative;
+				@include font-size(-1);
+                padding: 6px 15px 6px 30px;
+                color: $color-positive;
+			}
+        }
+    }
+	& .nav-split{
+		margin: 10px 20px;
+		background-color: #403d3b;
+		height:1px;
+		&.hdr{
+			margin: 0 0 10px;
+			height:2px;
+			background-color: #282523;
+			border-bottom: 1px solid #474442;
+		}
+	}
+	& h4{
+		color: #959290;
+		@include font-size(-3);
+		margin: 0 15px 5px;
+	}
+	& .brand{
+		@include font-size(-5);
+		padding: 7px 15px;
+		color: $color-positive;
+	}
+	& .ftr-wrpp{
+		border-top: 1px solid $color-dynamic-nav;
+		@include font-size(-4);
+		background: transparent url('/Content/Images/left-nav.jpg') 50% top no-repeat;
+		background-size: cover;
+		min-height: 200px;
+		padding: 30px;
+		color: #959290;
+		margin-top: 10px;
+		& span{
+			color: white;
+		}
+	}
+}

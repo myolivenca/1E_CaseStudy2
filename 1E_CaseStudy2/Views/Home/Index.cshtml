@@ -1,0 +1,309 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="Title">
+    <div class="container">
+        <div class="grid-wrpp">
+            <div class="col-6">
+                <h1>ConfigMgr Health <span>Dashboard <i class="icon-cog"></i></span></h1>
+                <ul class="states">
+                    <li>Server: MSQL</li>
+                    <li>Database: Arakne</li>
+                    <li>Last updated: 25 May 2015 12:30</li>
+                </ul>
+            </div>
+            <div class="col-6 col-invert">
+                <ul class="options">
+                    <li><div>3 <i class="icon-file-text2"></i></div><p>Articles</p></li>
+                    <li><div>1 <i class="icon-attachment"></i></div><p>White Paper</p></li>
+                    <li><div>0 <i class="icon-floppy-disk"></i></div><p>Saved Versions</p></li>
+                    <li><div>1 <i class="icon-download2"></i></div><p>Donwload</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="Hero">
+    <div class="hero-wrpp">
+        <h2>Software Livecycle Automation</h2>
+        <div class="grid-wrpp">
+            <div class="col-5">
+                <p>1E empowers the world's largest and most distributed organizations to simplify and speed up the complete livecycle software</p>
+                <p>&nbsp;</p>
+                <a href="" class="btn btn-small btn-primary">Contact us <i class="icon-envelop"></i></a> <span>+44 020 8326 3880 <i class="icon-phone"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="arrow-left-wrpp">
+        <i class="icon-circle-left"></i>
+    </div>
+    <div class="arrow-right-wrpp">
+        <i class="icon-circle-right"></i>
+    </div>
+    <ol>
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+</div>
+<div class="Isotope">
+    <div class="iso-main jq_isotope">
+        <div class="iso-gutter"></div>
+        <div class="iso-sizer"></div>
+
+        <div class="iso-item iso-item2">
+            <div class="iso-shadow">
+                <div class="iso-wrpp">
+                    <h4>Unidentified<br/><span>Application Types</span></h4>
+                    <div class="Easypie" ng-controller="applChartCtrl as appChart">
+		                <div class="chart" easypiechart percent="appChart.percent" options="appChart.options">
+			                <span class="percent">
+                                <span ng-bind="appChart.percent"></span>
+                                <span class="symbol">%</span>
+			                </span>
+		                </div>
+                        <p>PC with no valid data</p>
+	                </div>
+                </div>
+            </div>
+        </div>
+        <div class="iso-item iso-item2">
+            <div class="iso-shadow">
+                <div class="iso-wrpp" ng-controller="unitChartCtrl as unitChart">
+                    <div class="col-5 txt-wrpp">
+                        <h4>Overall Grade</h4>
+                        <h5 class="txt-success">LOW RISK</h5>
+                        <p>&nbsp;</p>
+                        <p> Maecenas urna massa, bibendum sit amet rutrum vel, luctus eu neque. Vivamus rhoncus molestie viverra.</p>
+                        <p>&nbsp;</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        
+                    </div>
+                    <div class="col-7 col-invert">
+                        <div class="Easypie" >
+		                    <div class="chart" easypiechart percent="unitChart.percent" options="unitChart.options">
+			                    <span class="percent">
+                                    <span ng-bind="unitChart.percent"></span>
+                                    <span class="symbol">%</span>
+			                    </span>
+		                    </div>
+	                    </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="iso-item" ng-controller="drillCtrl as drill" ng-class="{'active' : drill.seeDrill}">
+            <div class="iso-shadow">
+                <div class="iso-wrpp">
+                    <h5>Factor 3<br/><span>Administrators</span></h5>
+                    <div class="Easypie small" ng-controller="admChartCtrl as admChart">
+		                <div class="chart" easypiechart percent="admChart.percent" options="admChart.options">
+			                <span class="percent">
+                                <span ng-bind="admChart.percent"></span>
+                                <span class="symbol">%</span>
+			                </span>
+		                </div>
+	                </div>
+                    <div class="iso-ftr">
+                        <i class="icon-info float-lft"></i>
+                        <i class="float-rgt" ng-click="drill.toggleDrill()" ng-class="{'icon-circle-up' : drill.seeDrill, 'icon-circle-down' : !drill.seeDrill}"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="iso-drill">
+                <div class="drill-wrpp">
+                    <div class="iso-wrpp">
+                        <h5>Factor 1<br/><span>Whitelisting</span></h5>
+                        <div class="Easypie small" ng-controller="admChartCtrl as admChart">
+		                    <div class="chart" easypiechart percent="admChart.percent" options="admChart.options">
+			                    <span class="percent">
+                                    <span ng-bind="admChart.percent"></span>
+                                    <span class="symbol">%</span>
+			                    </span>
+		                    </div>
+	                    </div>
+                        <div class="iso-ftr">
+                            <i class="icon-info float-lft"></i>
+                            <i class="icon-circle-down float-rgt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="drill-wrpp">
+                    <div class="iso-wrpp">
+                        <h5>Factor 4<br/><span>Whitelisting</span></h5>
+                        <div class="Easypie small" ng-controller="opeChartCtrl as opeChart">
+		                    <div class="chart" easypiechart percent="opeChart.percent" options="opeChart.options">
+			                    <span class="percent">
+                                    <span ng-bind="opeChart.percent"></span>
+                                    <span class="symbol">%</span>
+			                    </span>
+		                    </div>
+	                    </div>
+                        <div class="iso-ftr">
+                            <i class="icon-info float-lft"></i>
+                            <i class="icon-circle-down float-rgt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="iso-item">
+            <div class="iso-shadow">
+                <div class="iso-wrpp">
+                    <h5>Factor 2<br/><span>Operative Systems</span></h5>
+                    <div class="Easypie small" ng-controller="opeChartCtrl as opeChart">
+		                <div class="chart" easypiechart percent="opeChart.percent" options="opeChart.options">
+			                <span class="percent">
+                                <span ng-bind="opeChart.percent"></span>
+                                <span class="symbol">%</span>
+			                </span>
+		                </div>
+	                </div>
+                    <div class="iso-ftr">
+                        <i class="icon-info float-lft"></i>
+                        <i class="icon-circle-down float-rgt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="iso-item">
+            <div class="iso-shadow">
+                <div class="iso-hdr orange">
+                    <h5>1.324</h5>
+                    <p>Applications</p>
+                    <i class="icon-cogs"></i>
+                </div>
+                <div class="iso-wrpp">
+                    <div class="Easypie small" ng-controller="appChartCtrl as appChart">
+		                <div class="chart" easypiechart percent="appChart.percent" options="appChart.options">
+			                <span class="percent">
+                                <span ng-bind="appChart.percent"></span>
+                                <span class="symbol">%</span>
+			                </span>
+		                </div>
+	                </div>
+                    <div class="iso-ftr">
+                        <i class="icon-info float-lft"></i>
+                        <i class="icon-circle-down float-rgt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="iso-item">
+            <div class="iso-shadow">
+                <div class="iso-hdr green">
+                    <h5>1.259</h5>
+                    <p>Administrators</p>
+                    <i class="icon-user"></i>
+                </div>
+                <div class="iso-wrpp">
+                    <div class="Easypie small" ng-controller="fadmChartCtrl as fadmChart">
+		                <div class="chart" easypiechart percent="fadmChart.percent" options="fadmChart.options">
+			                <span class="percent">
+                                <span ng-bind="fadmChart.percent"></span>
+                                <span class="symbol">%</span>
+			                </span>
+		                </div>
+	                </div>
+                    <div class="iso-ftr">
+                        <i class="icon-info float-lft"></i>
+                        <i class="icon-circle-down float-rgt"></i>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="iso-item iso-item2">
+            <h4>Last 12 weeks</h4>
+            <p>&nbsp;</p>
+            <div class="iso-shadow">
+                <div class="iso-wrpp">
+                    <h5>Factor 2<br/><span>Operative Systems</span></h5>
+                    <div class="iso-ftr">
+                        <i class="icon-info float-lft"></i>
+                        <i class="icon-circle-down float-rgt"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="iso-item iso-item2">
+            <h4>Your system counts</h4>
+            <p>&nbsp;</p>
+            <div class="grid-wrpp add-space">
+                <div class="col-6">
+                    <div class="iso-shadow">
+                        <div class="iso-wrpp">
+                            <h5>1.324</h5>
+                            <p>Desktops</p>
+                        </div>
+                        <div class="iso-icon blue">
+                            <i class="icon-display"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="iso-shadow">
+                        <div class="iso-wrpp">
+                            <h5>1.324</h5>
+                            <p>Ad sites</p>
+                        </div>
+                        <div class="iso-icon">
+                            <i class="icon-display"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="iso-shadow">
+                        <div class="iso-wrpp">
+                            <h5>1.324</h5>
+                            <p>Laptops</p>
+                        </div>
+                        <div class="iso-icon blue">
+                            <i class="icon-display"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="iso-shadow">
+                        <div class="iso-wrpp">
+                            <h5>1.324</h5>
+                            <p>Ad Admins</p>
+                        </div>
+                        <div class="iso-icon">
+                            <i class="icon-display"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="iso-shadow">
+                        <div class="iso-wrpp">
+                            <h5>1.324</h5>
+                            <p>Servers</p>
+                        </div>
+                        <div class="iso-icon blue">
+                            <i class="icon-display"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="iso-shadow">
+                        <div class="iso-wrpp">
+                            <h5>1.324</h5>
+                            <p>Active users</p>
+                        </div>
+                        <div class="iso-icon">
+                            <i class="icon-display"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+.Title{
+	margin-top: 3%;
+	& ul{
+		display: table;
+		& li{
+			display: inline-block;
+			text-align: center;
+		}
+		&.states{
+			margin-top: -5px;
+			& li{
+				@include font-size(-5);
+				border-left: 1px solid #494647;
+				padding: 0 10px;
+				&:first-child {
+					border-left:0px;
+					padding-left: 0px;
+				}
+			}
+		}
+		&.options{
+			float: right;
+			margin-top: 10px;
+			opacity: 0.5;
+			& li{
+				padding: 0 10px;
+				& p{
+					@include font-size(-5);
+				}
+				&:last-child {
+					padding-right: 0px;
+				}
+			}
+		}
+	}
+}

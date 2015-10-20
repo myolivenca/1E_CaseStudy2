@@ -1,0 +1,82 @@
+﻿[
+    {
+        "type": "link",
+        "items": [
+			{
+				"title": "Home",
+				"icon" : "home3",
+				"url": "http://www.google.com"
+			}
+		] 
+    }
+	,
+	{
+        "type": "link",
+		"title" : "Available Dashboards",
+        "items": [
+			{
+				"title": "Windows risk Audit",
+				"icon" : "shield" 
+			},
+			{
+				"title": "Config Manager Health",
+				"icon" : "cogs" 
+			}
+		] 
+    }
+	,
+	{
+        "type": "link",
+		"title" : "Coming soon",
+        "items": [
+			{
+				"title": "Software Waste Analysis",
+				"icon" : "laptop" 
+			},
+			{
+				"title": "Security Benchmark Analysis",
+				"icon" : "eye" 
+			}
+			,
+			{
+				"title": "Windows Update Readiness",
+				"icon" : "flag" 
+			}
+			,
+			{
+				"title": "Self Service Feasability",
+				"icon" : "man" 
+			}
+			,
+			{
+				"title": "Power Consuption Baseline",
+				"icon" : "leaf" 
+			}
+		] 
+    }
+	,
+	{
+        "type": "link",
+		"title" : "Quick links",
+        "items": [
+			{
+				"title": "Who we are"
+			},
+			{
+				"title": "Security Benchmark Analysis"
+			}
+			,
+			{
+				"title": "Costumer services"
+			}
+			,
+			{
+				"title": "Thecnical documentation"
+			}
+			,
+			{
+				"title": "1E blog"
+			}
+		] 
+    }
+]

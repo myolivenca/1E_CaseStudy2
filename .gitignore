@@ -14,6 +14,13 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
+# Sass cache folder
+.sass-cache/*
+
+# VS packages folder
+packages/*
+obj/*
+
 # Windows shortcuts
 *.lnk
 

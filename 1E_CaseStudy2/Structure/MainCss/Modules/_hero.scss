@@ -1,0 +1,68 @@
+.Hero{
+	margin-top: 10px;
+	margin-left: 2px;
+	color: $color-positive;
+	position: relative;
+	& .hero-wrpp{
+		background: transparent url('/Content/Images/hero.jpg') 50% top no-repeat;
+		background-size: cover;
+		height: auto;
+		padding: 30px 45px;
+		& h2{
+			@include font-size(12);
+			color: $color-positive;
+			text-shadow: 5px 2px 0px rgba($color-negative, 0.5);
+		}
+		& p, & span{
+			@include font-size(-4);
+			color : $color-positive;
+		}
+		
+	}
+	& ol{
+		display: table;
+		text-align: center;
+		position: absolute;
+		bottom: 10px;
+		left: 0;
+		width: 100%;
+		& li{
+			text-indent: -1000px;
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background-color: $color-positive;
+			border-radius: 20px;
+			margin: 0 3px;
+			cursor: pointer;
+			&.active{
+				box-shadow: inset 1px 1px 2px 1px rgba($color-negative, 0.5);
+				background-color: darken($color-positive, 30%);
+			}
+		}
+	}
+	& .arrow-left-wrpp{
+		position: absolute;
+		top:50%;
+		left:10px;
+		margin-top: -18px;
+		@include font-size(10);
+		opacity: 0.5;
+		cursor:pointer;
+		&:hover{
+			opacity: 1;
+		}
+	}
+	& .arrow-right-wrpp{
+		position: absolute;
+		top:50%;
+		right:10px;
+		margin-top: -18px;
+		@include font-size(10);
+		opacity: 0.5;
+		cursor:pointer;
+		&:hover{
+			opacity: 1;
+		}
+	}
+}

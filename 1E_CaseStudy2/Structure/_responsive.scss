@@ -1,0 +1,145 @@
+﻿@media screen and (max-width : $break-xlarge) {
+    .container{
+        padding: 0 15px;
+    }
+    .Navigation.dynamic-nav.fixed .Search{
+        right: 15px;
+    }
+}
+@media screen and (max-width : $break-medium) {
+    .col-3-md {
+        width:25%; 
+    }
+
+    .col-4-md {
+        width:33.33333333%; 
+    }
+
+    .col-6-md {
+        width:50%; 
+    }
+
+    .col-8-md {
+        width:66.66666667%; 
+    }
+
+    .col-9-md {
+        width:75%; 
+    }
+
+    .col-12-md {
+        width:100%; 
+    }
+    .col-none-md {
+        display: none; 
+    }
+	.Navigation{
+		&.left-nav{ // LEFT NAVIGATION
+			margin-left: (-$left-width);
+			position: fixed;
+			max-height: 100%;
+			overflow-y: auto;
+			&.active{
+				margin-left: 0;
+			}
+		}
+	}
+	.Main{
+		& .Content{
+			margin-left: 0;
+		}
+	}
+	.Header{
+		& .mobile-on{
+			display: block;
+			float:left;
+			width:32px;
+			@include font-size(16);
+			line-height: 28px;
+			padding: 0;
+			margin-top: 10px;
+		
+		}
+		& .brand{
+				margin: 0 0 0 40px;
+			}
+	}
+	.Title {
+		& .col-6{
+			width: 100%;
+			&.col-invert{
+				float: left;
+				& ul.options{
+					float: left;
+					& li:first-child{
+						padding-left: 0px;
+					}
+				}
+			}
+		}
+	}
+
+	
+}
+
+@media screen and (max-width : $break-small) {
+    .col-4-sd {
+        width:33.33333333%; 
+    }
+
+    .col-6-sd {
+        width:50%; 
+    }
+
+    .col-12-sd {
+        width:100%; 
+    }
+    .col-none-sd {
+        display: none; 
+    }
+    .parallax-window {
+        &.hero{
+            min-height: 200px;
+        }
+    }
+	.Header .mobile-off{
+		display: none;
+	}
+	
+}
+
+@media screen and (max-width : $break-xsmall) {
+    [class^="col-"],
+    [class*="col-"] {
+        width:100%;
+    }
+	.Header {
+		& .col-6{
+			width: 50%;
+		}
+	}
+	.Isotope{
+		& .iso-item{
+			width: 100%;
+			&.iso-item2{
+				width: 100%;
+			}
+			& .iso-drill{
+				min-width: 0;
+				& .drill-wrpp{
+					width: 100%;
+					margin-left:0;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width : $break-tiny) {
+	.Header {
+		& .brand img{
+		    padding-top: 10px;
+			max-width: 100%;
+		}
+	}
+    
+}

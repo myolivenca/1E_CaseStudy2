@@ -1,0 +1,23 @@
+﻿<div class="Navigation left-nav" ng-controller="NavCtrl as vm" ng-class="{'active' : $root.seeMenu}" ng-click="vm.toggleMenu()">
+    <div class="brand">
+        <img src="/Content/Images/1E-logo.png" />
+        <span>Powered by 1E</span>
+    </div>
+    <div class="nav-split hdr"></div>
+
+    <div ng-repeat="block in vm.items">
+        <div class="nav-split"></div>
+        <div nav-link  block="block"></div>
+    </div>
+    <div class="nav-split"></div>
+    <h4>Support</h4>
+    <ul class="no-link">
+        <li>UK +44 208 326 3499</li>
+        <li>US 1-866-3494032</li>
+    </ul>
+    <div class="ftr-wrpp">
+        <p>The <span>1E Intelligence</span> Tool provides an overview of lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ex massa, varius ut justo non, porta fermentum nisi. Nulla lobortis</p>
+        <p>&nbsp;</p>
+        <p>Vestibulum ex massa, varius ut justo non, porta fermentum nisi. <a href="">Click here</a> Nulla lobortis</p>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,800,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+    <meta http-equiv="EXPIRES" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="authors" content="Pedro Olivença" />
+    <meta name="owner" content="Pedro Olivença" />
+    <meta name="title" content="1E Case Study2" />
+    <meta property="description" content="Description here" />
+    <link rel="icon" href="http://www.1e.com/wp-content/uploads/2014/04/1E-favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="http://www.1e.com/wp-content/uploads/2014/04/1E-favicon.png" type="image/x-icon" />
+    <title>1E Case Study2</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Software Lifecycle Automation Solutions for Enterprises by 1E" />
+    <meta property="og:description" content="1E offers Software Lifecycle Automation solutions for software asset &amp; pc power management, software deployment, &amp; SCCM migrations. Learn more today!" />
+    <meta property="og:url" content="http://www.1e.com/" />
+    <meta property="og:site_name" content="1E" />
+    <link rel="canonical" href="http://www.1e.com/" />
+    @Styles.Render("~/bundles/css")
+
+    @Scripts.Render("~/bundles/vendor")
+    @Scripts.Render("~/bundles/plugins")
+    @Scripts.Render("~/bundles/angular")
+    
+</head>
+<body ng-app="App">
+    <div class="Main">
+        <nav>
+            @Html.Partial("_Navigation")
+        </nav>
+        <div class="Content">
+            <header>
+                @Html.Partial("_Header")
+            </header>
+            <section>
+                @RenderBody()
+            </section>
+        </div>
+    </div>
+    
+    @RenderSection("scripts", required: false)
+</body>
+</html>

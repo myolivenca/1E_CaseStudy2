@@ -1,0 +1,20 @@
+.Main{
+	max-width: $base-max-width;
+	margin: 0 auto;
+	background-color: $color-base;
+	
+	& .Content{
+		transition: margin-left ease 300ms;
+		margin-left: $left-width;
+		border-top: 2px solid $color-dynamic-nav;
+	}
+	
+}
+.container{
+    padding: 0 15px;
+}
+section{
+	& span, & p{
+			color: #494647;
+		}
+}

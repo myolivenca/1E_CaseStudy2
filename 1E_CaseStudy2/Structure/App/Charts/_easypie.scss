@@ -1,0 +1,30 @@
+.Easypie{
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	& .chart{
+		position: relative;
+	}
+	& span.percent{
+		margin: 0 auto;
+		text-align: center;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		position: absolute;
+		font-size: 36px;
+		line-height:36px;
+		& span.symbol{
+			@include font-size(0);
+		}
+	}
+	&.small{
+		& span.percent{
+			font-size: 24px;
+			line-height:24px;
+			& span.symbol{
+				@include font-size(-3);
+			}
+		}
+	}
+}

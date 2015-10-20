@@ -1,0 +1,150 @@
+.Isotope{
+	padding: $base-gutter;
+	& iso-main {
+		width: 100%;
+		position: relative;
+	}
+	& .iso-item{
+		width: $iso-item;
+		min-height: 30px;
+		margin-bottom: $iso-gutter * 2;
+		&.iso-item2{
+			width: $iso-item2;
+		}
+		& .iso-shadow{
+			box-shadow: 0 0 2px 2px rgba(0,0,0,0.05);
+			background-color: $color-positive;
+		}
+		& .iso-wrpp{
+			padding: $base-gutter;
+			& .txt-wrpp{
+				@include font-size(-3);
+			}
+		}
+		& .iso-icon{
+			position: absolute;
+			top:0;
+			right: 0;
+			width: 68px;
+			height: 68px;
+			background-color: lighten($color-negative, 35%);
+			&.blue{
+				background-color: $color-secondary;
+			}
+			& [class^='icon-']{
+				color: $color-positive;
+				@include font-size(18);
+				line-height: 36px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-top: -18px;
+				margin-left:-17px;
+			}
+		}
+		& .iso-hdr{
+			padding: $base-gutter;
+			& h5{
+				color: $color-positive;
+			}
+			& p{
+				@include font-size(-3);
+				color: $color-positive;
+			}
+			& [class^='icon-']{
+				color: $color-positive;
+				@include font-size(18);
+				line-height: 36px;
+				position: absolute;
+				right: $base-gutter;
+				top: $base-gutter;
+			}
+
+			&.green{
+				background-color: #869600;
+			}
+			&.orange{
+				background-color: $color-dynamic-nav;
+			}
+			
+		}
+		& .iso-ftr{
+			margin-top: 10px;
+			border-top: 1px solid darken($color-positive, 10%);
+			@include font-size(3, 10px 0 0 0);
+			color: darken($color-positive, 10%);
+			&:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			& [class*='icon-']{
+				cursor: pointer;
+				&:hover{
+					color: darken($color-positive, 40%);
+				}
+			}
+		}
+		& .col-6{
+			margin-bottom: $base-gutter;
+			& p{
+				@include font-size(-3);
+			}
+		}
+		&.active{
+		
+			& .iso-shadow{
+				background-color: #313231;
+				& h5, & h5 span{
+					color: $color-positive;
+				}
+				&:after{
+					top: 100%;
+					left: 50%;
+					border: solid transparent;
+					content: " ";
+					height: 0;
+					width: 0;
+					position: absolute;
+					pointer-events: none;
+					border-color: transparent;
+					border-top-color: #313231;
+					border-width: 15px;
+					margin-left: -15px;
+				}
+			}
+			& .iso-drill{
+				display: block;
+			}
+		}
+
+		& .iso-drill{
+			display: none;
+			
+			background-color: #313231;
+			position: absolute;
+			top: 110%;
+			width: 100%;
+			min-width: 445px;
+			left: 0;
+			z-index: 20;
+			padding: $base-gutter;
+			& .drill-wrpp{
+				width:200px;
+				background-color: $color-positive;
+				float: left;
+				margin-left: $base-gutter;
+				&:first-child{
+					margin-left: 0;
+				}
+			}
+			
+		}
+	}
+	& .iso-sizer{
+		width: $iso-item
+	}
+	& .iso-gutter{
+		width: $iso-gutter;
+	}
+}
